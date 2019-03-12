@@ -1,0 +1,43 @@
+.back-primary {
+  background-color: $primary;
+  color: $white;
+  a {
+    color: $white;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.back-white {
+  background-color: $white;
+  color: $black;
+  a {
+    color: $primary;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.back-opaque {
+  background-color: $opaque;
+  color: $black;
+  a {
+    color: $primary;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.back-black {
+  background-color: $black;
+  color: $white;
+  a {
+    color: $white;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

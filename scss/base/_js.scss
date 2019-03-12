@@ -1,0 +1,90 @@
+.js-page::after {
+  content: "";
+  background-color: inherit;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: opacity $trans;
+}
+
+
+.js-page.js-loaded::after {
+  opacity: 0.8;
+}
+
+.js-page .js-page-home {
+  min-height: 500px;
+  transition: min-height $trans;
+}
+
+.js-page.js-toggled .js-page-home {
+  min-height: 150px;
+}
+
+.js-hide-up {
+  max-height: 1000px;
+  transition: all $trans * 2;
+}
+
+.js-hide-up h2,
+.js-hide-up p,
+.js-hide-up div,
+.js-hide-up ul,
+.js-hide-up li {
+  transition: all $trans;
+}
+
+.js-toggled .js-hide-up {
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  transition: all $trans / 2;
+  visibility: hidden;
+}
+
+.js-toggled .js-hide-up * {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.js-page-main {
+  height: 0;
+  overflow: hidden;
+  transition: all $trans;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.js-toggled .js-page-main {
+  height: 100%;
+  visibility: visible;
+  z-index: 1;
+}
+
+.js-load {
+  min-height: 200px;
+}
+
+.js-loading {
+  position: relative;
+}
+
+.js-loading::after {
+  background-color: $opaque;
+  color: $black;
+  content: "loading";
+  padding: $pad * 3;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all $trans;
+}

@@ -1,0 +1,118 @@
+body, html {
+  background-color: $primary;
+  color: $white;
+}
+
+.page {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+}
+
+.logo {
+  color: $white;
+  border-bottom: 2px solid;
+  padding-bottom: $pad;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all $trans;
+  &:hover {
+    color: $secondary;
+    a {
+      color: $secondary;
+    }
+  }
+}
+
+.logo a {
+  color: $white;
+}
+
+.navigation {
+  padding: $pad;
+}
+
+.nav-button {
+  display: block;
+  padding: $pad / 2;
+}
+
+.links {
+  font-size: 150%;
+  margin: $pad auto;
+  max-width: 250px;
+}
+
+.links .line {
+  padding: 0;
+}
+
+.content {
+  box-shadow: -2 -5px 20px $heavy;
+}
+
+a.pdf {
+  color: $ui;
+  font-size: 30px;
+  display: block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+a.email,
+.links a {
+  color: $secondary;
+  &:hover {
+    color: $white;
+  }
+}
+
+.footer {
+  a.email {
+    display: inline-block;
+    font-size: 130%;
+    padding: $pad / 2 $pad * 2;
+    border: 1px solid $light;
+    background-color: $white;
+    color: $black;
+    &:hover {
+      background-color: $opaque;
+      color: $black;
+    }
+  }
+
+  .links a {
+    color: $secondary;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.assoc-logo {
+  display: block;
+  box-sizing: border-box;
+  height: auto;
+  padding: $pad * 2;
+  width: 50%;
+  filter: grayscale(100%);
+  transition: all $trans;
+  @media screen and (min-width: $column * 0.5) {
+    width: 25%;
+  }
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.footer {
+  border-top: 1px solid $light;
+  border-bottom: 10px solid $primary;
+}

@@ -1,0 +1,37 @@
+// Shades
+
+$light: rgba(0,0,0,0.1);
+$heavy: rgba(0,0,0,0.2);
+
+// Colors
+
+$white: #FFFFFF;
+$opaque: #F9F9F9;
+$primary: #031921;
+$secondary: #0A536D;
+$accent: #1083AD;
+$black: #000;
+$ui: #A51400;
+
+// Layout Vars
+
+$column: 960px;
+$pad: 20px;
+
+// UX Vars
+
+$trans: 1s;
+$border-radius: 3px;
+
+// Fonts
+
+$font-fallback: serif;
+$font-body: 'Libre Baskerville', serif;
+$font-heading: $font-body, serif;
+$font-secondary: $font-heading, $font-body, sans-serif;
+$font-ui: 'Roboto', $font-secondary;
+
+// Font Sizes
+
+$font-size-fixed-regular: 18px;
+$font-size-fixed-small: 11px;

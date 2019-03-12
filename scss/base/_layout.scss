@@ -1,0 +1,153 @@
+// Simple Reset
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.front {
+  position: relative;
+  z-index: 1;
+}
+
+.rel {
+  position: relative;
+}
+
+// Columns
+
+.container {
+  max-width: $column;
+  margin: auto;
+  position: relative;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.medium.container {
+  max-width: $column * 0.75;
+}
+
+.narrow.container {
+  max-width: $column * 0.75;
+}
+
+.container:after,
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.pad {
+  padding: $pad; 
+}
+
+.pad-top {
+  padding-top: $pad;
+}
+
+.pad-double {
+  padding: $pad;
+  @media screen and (min-width: $column * 0.75) {
+    padding: $pad * 2;
+  }
+}
+
+.pad-mega {
+  padding: $pad * 2;
+  @media screen and (min-width: $column * 0.75) {
+    padding: $pad * 5;
+  }
+}
+
+.full, .twothird, .half, .third {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  @media screen and (min-width: $column*0.75) {
+    float: left;
+  }
+}
+
+.row {
+  padding-bottom: $pad;
+}
+
+.column {
+  padding-bottom: $pad;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+@media screen and (min-width: $column*0.75) {
+  .twothird {
+    width: 66.66%;
+  }
+
+  .half {
+    width: 50%;
+  }
+
+  .third {
+    width: 33.33%; 
+  }
+
+  .column {
+    padding-bottom: 0;
+    padding-right: $pad;
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// Straight Row
+
+.line, .item {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.line {
+  display: table-row; 
+}
+
+.item {
+  display: table-cell;
+  width: 1%;
+}
+
+.item > * {
+  display: inline;
+}
+
+// Sections
+
+.section .container {
+  border-bottom: 1px solid $light;
+}
+
+.section:last-of-type .container {
+  border-bottom: none;
+}
